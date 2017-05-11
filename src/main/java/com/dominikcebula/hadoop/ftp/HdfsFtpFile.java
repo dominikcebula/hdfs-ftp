@@ -1,4 +1,4 @@
-package com.hunantv.hadoop.ftp;
+package com.dominikcebula.hadoop.ftp;
 
 import java.io.*;
 import java.util.*;

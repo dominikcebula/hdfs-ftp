@@ -1,4 +1,4 @@
-package com.hunantv.hadoop.ftp;
+package com.dominikcebula.hadoop.ftp;
 
 import org.apache.ftpserver.ftplet.*;
 import org.apache.hadoop.fs.FileSystem;

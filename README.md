@@ -7,7 +7,7 @@ This project is based on original: https://github.com/heguangwu/hdfs-ftp
 
 Library should be used with serverFactory in following way:
 ```java
-FileSystem fileSystem = getFileSystem();	// getFileSystem() method has to be implemented
+FileSystem fileSystem = getFileSystem();	// getFileSystem() method has to be supplied by you
 FtpServerFactory serverFactory = new FtpServerFactory();
 serverFactory.setFileSystem(new HdfsFileSystemFactory(fileSystem));
 
