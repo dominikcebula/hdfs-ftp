@@ -5,7 +5,7 @@
 
    <groupId>com.dominikcebula.hadoop.ftp</groupId>
    <artifactId>hdfs-ftp</artifactId>
-   <version>1.0</version>
+   <version>1.1-SNAPSHOT</version>
 
    <name>${project.groupId}:${project.artifactId}</name>
    <description>
