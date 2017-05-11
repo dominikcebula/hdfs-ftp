@@ -4,7 +4,7 @@
 
    <groupId>com.dominikcebula.hadoop.ftp</groupId>
    <artifactId>hdfs-ftp</artifactId>
-   <version>1.1-SNAPSHOT</version>
+   <version>1.0-SNAPSHOT</version>
 
    <scm>
       <connection>scm:git:https://github.com/dominikcebula/hdfs-ftp.git</connection>
