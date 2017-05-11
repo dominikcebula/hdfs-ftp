@@ -1,14 +1,19 @@
 package com.hunantv.hadoop.ftp;
 
-import org.apache.ftpserver.ftplet.FileSystemFactory;
-import org.apache.ftpserver.ftplet.FileSystemView;
-import org.apache.ftpserver.ftplet.FtpException;
-import org.apache.ftpserver.ftplet.User;
+import org.apache.ftpserver.ftplet.*;
+import org.apache.hadoop.fs.FileSystem;
 
-public class HdfsFileSystemFactory implements FileSystemFactory {
+public class HdfsFileSystemFactory implements FileSystemFactory
+{
+   private final FileSystem fileSystem;
 
-	public FileSystemView createFileSystemView(User user) throws FtpException {
-		return new HdfsFileSytemView(user);
-	}
+   public HdfsFileSystemFactory(FileSystem fileSystem)
+   {
+      this.fileSystem = fileSystem;
+   }
 
+   public FileSystemView createFileSystemView(User user) throws FtpException
+   {
+      return new HdfsFileSystemView(user, fileSystem);
+   }
 }

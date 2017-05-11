@@ -1,5 +1,16 @@
 hdfs-ftp
 ========
-一个非常简单的HDFS FTP Server
-采用maven编译，HDFS的版本采用的是2.3.0，但其它更高版本应该也是可以支持的
-FTP权限控制使用user.properties，配置非常简单，密码当前是采用明文方式保存在该文件中
+HDFS-FTP is a library which provides Apache MINA FileSystemView implementation for HDFS.
+This allows you to easily create FTP over HDFS server embedded into your project.
+
+This project is based on original: https://github.com/heguangwu/hdfs-ftp
+
+Library should be used with serverFactory in following way:
+```java
+FileSystem fileSystem = getFileSystem();	// getFileSystem() method has to be implemented
+FtpServerFactory serverFactory = new FtpServerFactory();
+serverFactory.setFileSystem(new HdfsFileSystemFactory(fileSystem));
+
+FtpServer server = serverFactory.createServer();
+server.start();
+```
